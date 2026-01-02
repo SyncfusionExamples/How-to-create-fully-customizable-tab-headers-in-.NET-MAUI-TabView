@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView"
+             xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+             x:Class="TabViewHeaderCustomization.MainPage">
+
+    <tabView:SfTabView x:Name="TabView" TabBarPlacement="Top"                            
+        TabWidthMode="SizeToContent"  TabBarHeight="72"   IndicatorPlacement="Fill">
+        <tabView:SfTabView.TabBarBackground>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                <GradientStop Color="#6A11CB" Offset="0.0" />
+                <GradientStop Color="#2575FC" Offset="1.0" />
+            </LinearGradientBrush>
+        </tabView:SfTabView.TabBarBackground>
+
+        <tabView:SfTabView.IndicatorBackground>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#FF512F" Offset="0.0" />
+                <GradientStop Color="#DD2476" Offset="1.0" />
+            </LinearGradientBrush>
+        </tabView:SfTabView.IndicatorBackground>
+        <tabView:SfTabView.IndicatorCornerRadius>8</tabView:SfTabView.IndicatorCornerRadius>
+        <tabView:SfTabView.IndicatorStrokeThickness>0</tabView:SfTabView.IndicatorStrokeThickness>
+
+        <tabView:SfTabView.HeaderHorizontalTextAlignment>Center</tabView:SfTabView.HeaderHorizontalTextAlignment>
+        <tabView:SfTabItem Header="Home" ImageSource="dotnet_bot.png" ImagePosition="Left"                
+                           ImageTextSpacing="8" TextColor="#FFFFFF" FontAttributes="Bold"
+                           FontSize="14">
+            <tabView:SfTabItem.Content>
+                <Grid Padding="16">
+                    <Label Text="Welcome to the Home tab. Here you can find an overview of your application and quick access to essential features."
+                               FontSize="16" TextColor="#222" LineBreakMode="WordWrap"/>
+                </Grid>
+            </tabView:SfTabItem.Content>
+        </tabView:SfTabItem>
+
+        <tabView:SfTabItem Header="Tasks" BadgeText="10" TextColor="#FFFFFF"
+                            FontAttributes="Bold" FontSize="14">
+            <tabView:SfTabItem.BadgeSettings >
+                <core:BadgeSettings FontSize="15" Background="Violet" Type="None"/>
+            </tabView:SfTabItem.BadgeSettings>
+            <tabView:SfTabItem.Content>
+                <Grid Padding="16">
+                    <Label Text="Manage your tasks efficiently. Add new tasks, track progress, and stay organized to meet your goals."
+                               FontSize="16" TextColor="#222" LineBreakMode="WordWrap"/>
+                </Grid>
+            </tabView:SfTabItem.Content>
+        </tabView:SfTabItem>
+
+        <tabView:SfTabItem Header="Reports"  TextColor="#FFFFFF"
+                            FontAttributes="Bold" FontSize="14">
+            <tabView:SfTabItem.Content>
+                <Grid Padding="16">
+                    <Label Text="View detailed reports and analytics. Gain insights into your performance and make informed decisions."
+                               FontSize="16" TextColor="#222" LineBreakMode="WordWrap"/>
+                </Grid>
+            </tabView:SfTabItem.Content>
+        </tabView:SfTabItem>
+    </tabView:SfTabView>
+
+
+
+</ContentPage>
