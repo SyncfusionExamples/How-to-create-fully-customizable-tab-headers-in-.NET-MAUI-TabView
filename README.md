@@ -17,58 +17,69 @@ A sample application that demonstrates how to create fully customizable tab head
 To achieve fully customizable tab headers, use the following XAML:
 
 ```xml
-    <tabView:SfTabView x:Name="TabView" TabBarPlacement="Top"                            
-    TabWidthMode="SizeToContent"  TabBarHeight="72"   IndicatorPlacement="Fill">
-    <tabView:SfTabView.TabBarBackground>
-        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-            <GradientStop Color="#6A11CB" Offset="0.0" />
-            <GradientStop Color="#2575FC" Offset="1.0" />
-        </LinearGradientBrush>
-    </tabView:SfTabView.TabBarBackground>
+     <ContentPage.Resources>
+    <Style TargetType="tabView:SfTabItem">
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup>
+                    <VisualState x:Name="NormalFilled" >
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="#111111" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="SelectedFilled">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="#FFFFFF" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+</ContentPage.Resources>
 
-    <tabView:SfTabView.IndicatorBackground>
-        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-            <GradientStop Color="#FF512F" Offset="0.0" />
-            <GradientStop Color="#DD2476" Offset="1.0" />
-        </LinearGradientBrush>
-    </tabView:SfTabView.IndicatorBackground>
-    <tabView:SfTabView.IndicatorCornerRadius>8</tabView:SfTabView.IndicatorCornerRadius>
-    <tabView:SfTabView.IndicatorStrokeThickness>0</tabView:SfTabView.IndicatorStrokeThickness>
-
-    <tabView:SfTabView.HeaderHorizontalTextAlignment>Center</tabView:SfTabView.HeaderHorizontalTextAlignment>
-    <tabView:SfTabItem Header="Home" ImageSource="dotnet_bot.png" ImagePosition="Left"                
-                       ImageTextSpacing="8" TextColor="#FFFFFF" FontAttributes="Bold"
-                       FontSize="14">
-        <tabView:SfTabItem.Content>
+<tabView:SfTabView x:Name="tabView" IndicatorBackground="SkyBlue" IndicatorPlacement="Fill" TabBarHeight="60" TabBarBackground="Transparent" TabBarBorderColor="#6A11CB"
+                   TabBarBorderThickness="6" TabBarCornerRadius="15" >
+    <tabView:SfTabView.Items>
+        <tabView:SfTabItem Header="Call" x:Name="callItem"
+                       ImagePosition="Left">
+            <tabView:SfTabItem.ImageSource>
+                <FontImageSource Glyph="ﺶ" x:Name="call"
+                               Color="{Binding Source={x:Reference callItem},Path=TextColor}"
+                           FontFamily="MaterialDesignIcons"/>
+            </tabView:SfTabItem.ImageSource>
             <Grid Padding="16">
-                <Label Text="Welcome to the Home tab. Here you can find an overview of your application and quick access to essential features."
-                           FontSize="16" TextColor="#222" LineBreakMode="WordWrap"/>
+                <Label Text="Make and manage calls. View recent calls, dial new numbers, and quickly start a call from your contacts."
+          FontSize="16" TextColor="#222" LineBreakMode="WordWrap"/>
             </Grid>
-        </tabView:SfTabItem.Content>
-    </tabView:SfTabItem>
+        </tabView:SfTabItem>
 
-    <tabView:SfTabItem Header="Tasks" BadgeText="10" TextColor="#FFFFFF"
-                        FontAttributes="Bold" FontSize="14">
-        <tabView:SfTabItem.BadgeSettings >
-            <core:BadgeSettings FontSize="15" Background="Violet" Type="None"/>
-        </tabView:SfTabItem.BadgeSettings>
-        <tabView:SfTabItem.Content>
+        <tabView:SfTabItem Header="Favourite" x:Name="favItem"
+                       ImagePosition="Left">
+            <tabView:SfTabItem.ImageSource>
+                <FontImageSource Glyph="" x:Name="fav"
+                           Color="{Binding Source={x:Reference favItem},Path=TextColor}"
+                           FontFamily="MaterialDesignIcons"/>
+            </tabView:SfTabItem.ImageSource>
             <Grid Padding="16">
-                <Label Text="Manage your tasks efficiently. Add new tasks, track progress, and stay organized to meet your goals."
-                           FontSize="16" TextColor="#222" LineBreakMode="WordWrap"/>
+                <Label Text="Your favorite contacts and shortcuts. Pin people you reach often for one‑tap calling or messaging."
+          FontSize="16" TextColor="#222" LineBreakMode="WordWrap"/>
             </Grid>
-        </tabView:SfTabItem.Content>
-    </tabView:SfTabItem>
+        </tabView:SfTabItem>
 
-    <tabView:SfTabItem Header="Reports"  TextColor="#FFFFFF"
-                        FontAttributes="Bold" FontSize="14">
-        <tabView:SfTabItem.Content>
+        <tabView:SfTabItem Header="Contacts" x:Name="contactsItem"
+                       ImagePosition="Left">
+            <tabView:SfTabItem.ImageSource>
+                <FontImageSource Glyph="" x:Name="contacts"
+                           Color="{Binding Source={x:Reference contactsItem},Path=TextColor}"
+                           FontFamily="MaterialDesignIcons"/>
+            </tabView:SfTabItem.ImageSource>
             <Grid Padding="16">
-                <Label Text="View detailed reports and analytics. Gain insights into your performance and make informed decisions."
-                           FontSize="16" TextColor="#222" LineBreakMode="WordWrap"/>
+                <Label Text="Browse and manage your contacts. Search, view details, and quickly add or edit entries in your address book."
+          FontSize="16" TextColor="#222" LineBreakMode="WordWrap"/>
             </Grid>
-        </tabView:SfTabItem.Content>
-    </tabView:SfTabItem>
+        </tabView:SfTabItem>
+    </tabView:SfTabView.Items>
 </tabView:SfTabView>
 ```
 
