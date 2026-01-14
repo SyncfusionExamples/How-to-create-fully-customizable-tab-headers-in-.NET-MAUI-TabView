@@ -4,10 +4,10 @@ A sample application that demonstrates how to create fully customizable tab head
 
 In the example below, we demonstrate:
 
-    1. Visual state customization: Using `VisualStateManager` to dynamically change the header text color of each `SfTabItem` based on selection state.
-    2. Icon color binding: Applying FontImageSource to each ImageSource property in `SfTabItem   and binding its color to the tab’s TextColor for consistent styling.
-    3. Border styling: Customizing the tab header area’s border using properties such as `TabBarBorderColor`, `TabBarBorderThickness`, and `TabBarCornerRadius`.
-    4. Indicator and layout settings: Adjusting `IndicatorPlacement`, `IndicatorBackground`, and `TabBarHeight` for a modern look.
+ 1. Visual state customization: Using `VisualStateManager` to dynamically change the header text color of each `SfTabItem` based on selection state.
+ 2. Icon color binding: Applying FontImageSource to each ImageSource property in `SfTabItem   and binding its color to the tab’s TextColor for consistent styling.
+ 3. Border styling: Customizing the tab header area’s border using properties such as `TabBarBorderColor`, `TabBarBorderThickness`, and `TabBarCornerRadius`.
+ 4. Indicator and layout settings: Adjusting `IndicatorPlacement`, `IndicatorBackground`, and `TabBarHeight` for a modern look.
 
 ## Prerequisites
 
