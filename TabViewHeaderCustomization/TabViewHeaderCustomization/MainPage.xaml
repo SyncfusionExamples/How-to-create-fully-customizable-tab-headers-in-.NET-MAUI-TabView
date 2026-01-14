@@ -28,7 +28,7 @@
     </ContentPage.Resources>
 
     <tabView:SfTabView x:Name="tabView" IndicatorBackground="SkyBlue" IndicatorPlacement="Fill" TabBarHeight="60" TabBarBackground="Transparent" TabBarBorderColor="#6A11CB"
-                       TabBarBorderThickness="6" TabBarCornerRadius="15" >
+                       TabBarBorderThickness="3" Margin="10" TabBarCornerRadius="15" >
         <tabView:SfTabView.Items>
             <tabView:SfTabItem Header="Call" x:Name="callItem"
                            ImagePosition="Left">

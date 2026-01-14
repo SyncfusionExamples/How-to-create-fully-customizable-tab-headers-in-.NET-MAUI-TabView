@@ -1,6 +1,13 @@
 # How-to-create-fully-customizable-tab-headers-in-.NET-MAUI-TabView
 
-A sample application that demonstrates how to create fully customizable tab headers in .NET MAUI TabView. You can customize header text, images, badges, alignment, fonts, colors, and even apply gradients or completely custom header layouts for a polished and professional UI.
+A sample application that demonstrates how to create fully customizable tab headers in .NET MAUI TabView. You can customize header text, images, border, alignment, fonts, colors or completely custom header layouts for a polished and professional UI.
+
+In the example below, we demonstrate:
+
+    1. Visual state customization: Using VisualStateManager to dynamically change header text color of each SfTabItem based on selection state.
+    2. Icon color binding: Applying FontImageSource to each SfTabItem ImageSource and binding its color to the tab’s TextColor for consistent styling.
+    3. Border styling: Customizing the tab header area’s border using properties like `TabBarBorderColor`, `TabBarBorderThickness`, and   `TabBarCornerRadius`.
+    4. Indicator and layout settings: Adjusting `IndicatorPlacement`, `IndicatorBackground`, and `TabBarHeight` for a modern look.
 
 ## Prerequisites
 
@@ -38,8 +45,7 @@ To achieve fully customizable tab headers, use the following XAML:
     </Style>
 </ContentPage.Resources>
 
-<tabView:SfTabView x:Name="tabView" IndicatorBackground="SkyBlue" IndicatorPlacement="Fill" TabBarHeight="60" TabBarBackground="Transparent" TabBarBorderColor="#6A11CB"
-                   TabBarBorderThickness="6" TabBarCornerRadius="15" >
+<tabView:SfTabView x:Name="tabView" IndicatorBackground="SkyBlue" IndicatorPlacement="Fill" TabBarHeight="60" TabBarBackground="Transparent"  TabBarBorderColor="#6A11CB" TabBarBorderThickness="3" Margin="10" TabBarCornerRadius="15" >
     <tabView:SfTabView.Items>
         <tabView:SfTabItem Header="Call" x:Name="callItem"
                        ImagePosition="Left">
