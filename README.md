@@ -1,23 +1,42 @@
 # How-to-create-fully-customizable-tab-headers-in-.NET-MAUI-TabView
 
-A sample application that demonstrates how to create fully customizable tab headers in .NET MAUI TabView. You can customize header text, images, border, alignment, fonts, colors or completely custom header layouts for a polished and professional UI.
+**Repository Description**  
+This repository contains a .NET MAUI sample application that demonstrates how to create fully customizable tab headers using the Syncfusion MAUI TabView component.
 
-In the example below, we demonstrate:
+This sample showcases how to customize header text, images, borders, alignment, fonts, colors, and entirely custom header layouts to achieve a polished and professional user interface.
 
- 1. Visual state customization: Using `VisualStateManager` to dynamically change the header text color of each `SfTabItem` based on selection state.
- 2. Icon color binding: Applying FontImageSource to each ImageSource property in `SfTabItem   and binding its color to the tab’s TextColor for consistent styling.
- 3. Border styling: Customizing the tab header area’s border using properties such as `TabBarBorderColor`, `TabBarBorderThickness`, and `TabBarCornerRadius`.
- 4. Indicator and layout settings: Adjusting `IndicatorPlacement`, `IndicatorBackground`, and `TabBarHeight` for a modern look.
+## Project Overview
+The purpose of this project is to help developers understand how to build highly customized tab headers in .NET MAUI applications using the Syncfusion TabView component. It demonstrates various customization techniques that enhance visual consistency and improve user experience across mobile and desktop platforms.
+
+## Features
+- Customizable tab header text, images, and layouts  
+- Visual state customization using `VisualStateManager`  
+- Dynamic header text color changes based on tab selection  
+- Icon color binding using `FontImageSource`  
+- Header border styling with configurable color, thickness, and corner radius  
+- Indicator and layout customization (placement, background, and height)  
+
+### Customization Demonstrated
+This sample includes the following customization techniques:
+1. **Visual state customization**  
+   Uses `VisualStateManager` to dynamically change the header text color of each `SfTabItem` based on selection state.
+2. **Icon color binding**  
+   Applies `FontImageSource` to each `ImageSource` property in `SfTabItem`, binding its color to the tab’s text color for consistent styling.
+3. **Border styling**  
+   Customizes the tab header area’s border using `TabBarBorderColor`, `TabBarBorderThickness`, and `TabBarCornerRadius`.
+4. **Indicator and layout settings**  
+   Adjusts `IndicatorPlacement`, `IndicatorBackground`, and `TabBarHeight` to achieve a modern UI.
 
 ## Prerequisites
+Ensure that the following requirements are met before running this project:
+- Visual Studio 2026  
+- .NET MAUI workload installed  
 
-* Visual Studio 2026 with .NET MAUI workload
-
-## How to run this sample
-
-1. Clone the repository.
+## Installation and Running the Application
+1. Clone this repository to your local machine.
 2. Open the solution file `TabViewHeaderCustomization.sln` in Visual Studio 2026.
-3. Build and run the project.
+3. Restore NuGet packages if prompted.
+4. Build and run the project on an Android, iOS, Windows, or MacCatalyst target.
 
 ## Code Snippet
 
@@ -89,7 +108,29 @@ To achieve fully customizable tab headers, use the following XAML:
 </tabView:SfTabView>
 ```
 
-## Further references
+## Usage
+Run the application and interact with the TabView to observe:
+- Dynamic styling changes when switching tabs  
+- Custom icons and text alignment  
+- Header border and indicator behavior  
 
-* [TabBar Customization ](https://help.syncfusion.com/maui/tabview/tab-bar-customization)
+You can modify the XAML definitions to experiment with layout and visual customization options.
 
+## Documentation
+- **General Syncfusion documentation:**  
+  https://help.syncfusion.com/
+- **.NET MAUI Introduction:**  
+  https://help.syncfusion.com/maui/introduction/overview
+
+## Additional Resources
+- **TabBar Customization Guide:**  
+  https://help.syncfusion.com/maui/tabview/tab-bar-customization
+
+## Troubleshooting
+- Ensure the .NET MAUI workload is properly installed.
+- Clean and rebuild the solution if build errors occur.
+- Verify the target platform is correctly configured.
+- Check the Output and Device Log windows for runtime issues.
+
+## Support
+For detailed API references, advanced configuration options, and further guidance, refer to the Syncfusion .NET MAUI documentation and customization guides listed above.
